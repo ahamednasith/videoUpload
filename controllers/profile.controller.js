@@ -90,13 +90,8 @@ const signUp = async (req,res,next) => {
 const uploadVideo = async (req, res, next) => {
 try{
     const videoPath = req.file.path;
-    console.log(videoPath)
     const videoUrl = `http://localhost:7878/${videoPath}`;
-    console.log(videoUrl);
-
     const thumbnailPath = `public/thumbnails/${path.basename(videoPath, path.extname(videoPath))}.jpg`;
-    console.log(thumbnailPath);
-
     ffmpeg(videoPath)
     .screenshots({
       timestamps: ['50%'],
