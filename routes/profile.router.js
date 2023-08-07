@@ -1,5 +1,5 @@
 const express = require('express');
-const profileController = require('../controllers/profile.controller');
+const profileController = require('../controller/profile.controller');
 const Joi = require('../utils/joi');
 const jwt = require('../utils/cryptAndJwt');
 const multer = require('multer');
